@@ -18,3 +18,19 @@ $white: hsl(0, 0%, 100%);
 body {
   font-family: "Roboto", sans-serif;
 }
+
+@mixin primary-btn {
+  padding: 1.2rem;
+  color: $white;
+  background-color: $darkSlateGrey;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+@mixin big-screen {
+  @media screen and (min-wdith: 1440px) {
+    @content;
+  }
+}

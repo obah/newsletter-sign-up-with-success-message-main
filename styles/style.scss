@@ -1,9 +1,126 @@
 @import "config";
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.container {
+  min-height: 100vh;
+  min-width: 375px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__hero {
+    order: 1;
+    padding: 0 1.5rem;
+    color: $darkSlateGrey;
+
+    h1,
+    p,
+    ul {
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    ul {
+      padding-left: 1rem;
+
+      li {
+        background: url("/assets/images/icon-list.svg") no-repeat left center;
+        padding: 0.5rem 2rem;
+        list-style: none;
+        vertical-align: top;
+      }
+    }
+
+    &-form {
+      margin: 2rem 0;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      label {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      input {
+        display: block;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid $grey;
+
+        &::placeholder {
+          color: $grey;
+        }
+      }
+
+      button {
+        margin: 1rem 0;
+        @include primary-btn;
+      }
+    }
+  }
+
+  &__image {
+    order: 0;
+
+    img {
+      width: 100%;
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+
+  &__success {
+    min-height: 100%;
+    padding: 8rem 1rem 2rem;
+    color: $darkSlateGrey;
+
+    img,
+    h2 {
+      margin: 0 0 2rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      line-height: 2.3rem;
+    }
+
+    p {
+      margin: 0 0 10rem;
+      line-height: 1.4rem;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    button {
+      width: 100%;
+      @include primary-btn;
+    }
+  }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.hidden {
+  display: none;
 }
+
+@include big-screen {
+}
+
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
+// }
+// .attribution a {
+//   color: hsl(228, 45%, 44%);
+// }

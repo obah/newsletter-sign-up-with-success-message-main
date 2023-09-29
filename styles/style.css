@@ -12,11 +12,110 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.container {
+  min-height: 100vh;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container__hero {
+  order: 1;
+  padding: 0 1.5rem;
+  color: hsl(234, 29%, 20%);
+}
+.container__hero h1,
+.container__hero p,
+.container__hero ul {
+  margin-bottom: 1rem;
+}
+.container__hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.container__hero ul {
+  padding-left: 1rem;
+}
+.container__hero ul li {
+  background: url("/assets/images/icon-list.svg") no-repeat left center;
+  padding: 0.5rem 2rem;
+  list-style: none;
+  vertical-align: top;
+}
+.container__hero-form {
+  margin: 2rem 0;
+}
+.container__hero-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container__hero-form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.container__hero-form input {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(231, 7%, 60%);
+}
+.container__hero-form input::-moz-placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.container__hero-form input::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.container__hero-form button {
+  margin: 1rem 0;
+  padding: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.container__image {
+  order: 0;
+}
+.container__image img {
+  width: 100%;
+}
+.container__image-desktop {
+  display: none;
+}
+.container__success {
+  min-height: 100%;
+  padding: 8rem 1rem 2rem;
+  color: hsl(234, 29%, 20%);
+}
+.container__success img,
+.container__success h2 {
+  margin: 0 0 2rem;
+}
+.container__success h2 {
+  font-size: 2.2rem;
+  line-height: 2.3rem;
+}
+.container__success p {
+  margin: 0 0 10rem;
+  line-height: 1.4rem;
+}
+.container__success span {
+  font-weight: 700;
+}
+.container__success button {
+  width: 100%;
+  padding: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 0;
+  border-radius: 0.5rem;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
