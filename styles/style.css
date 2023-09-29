@@ -13,7 +13,6 @@ body {
 }
 
 .container {
-  min-height: 100vh;
   min-width: 375px;
   display: flex;
   flex-direction: column;
@@ -33,10 +32,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
-.container__hero ul {
-  padding-left: 1rem;
-}
-.container__hero ul li {
+.container__hero ul > li {
   background: url("/assets/images/icon-list.svg") no-repeat left center;
   padding: 0.5rem 2rem;
   list-style: none;
@@ -75,6 +71,9 @@ body {
   font-weight: 700;
   border: 0;
   border-radius: 0.5rem;
+}
+.container__hero-form button:hover {
+  background-image: linear-gradient(to right, red, hsl(4, 100%, 67%));
 }
 .container__image {
   order: 0;
@@ -115,7 +114,45 @@ body {
   border: 0;
   border-radius: 0.5rem;
 }
+.container__success button:hover {
+  background-image: linear-gradient(to right, red, hsl(4, 100%, 67%));
+}
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+    display: grid;
+    place-items: center;
+  }
+  .container {
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 2rem;
+  }
+  .container__hero {
+    order: 0;
+    padding: 2rem;
+    width: 400px;
+  }
+  .container__hero h1 {
+    font-size: 3rem;
+  }
+  .container__hero p,
+  .container__hero li {
+    font-size: 0.9rem;
+  }
+  .container__image-mobile {
+    display: none;
+  }
+  .container__image-desktop {
+    display: inline;
+  }
 }/*# sourceMappingURL=style.css.map */

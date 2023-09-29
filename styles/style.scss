@@ -1,7 +1,6 @@
 @import "config";
 
 .container {
-  min-height: 100vh;
   min-width: 375px;
 
   display: flex;
@@ -24,15 +23,11 @@
       font-weight: 700;
     }
 
-    ul {
-      padding-left: 1rem;
-
-      li {
-        background: url("/assets/images/icon-list.svg") no-repeat left center;
-        padding: 0.5rem 2rem;
-        list-style: none;
-        vertical-align: top;
-      }
+    ul > li {
+      background: url("/assets/images/icon-list.svg") no-repeat left center;
+      padding: 0.5rem 2rem;
+      list-style: none;
+      vertical-align: top;
     }
 
     &-form {
@@ -115,6 +110,53 @@
 }
 
 @include big-screen {
+  body {
+    height: 100vh;
+    background-color: $charcoalGrey;
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    padding: 1rem;
+
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+
+    background-color: $white;
+    border-radius: 2rem;
+
+    &__hero {
+      order: 0;
+      //   padding: 2rem;
+      padding: 2rem;
+      width: 400px;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p,
+      li {
+        font-size: 0.9rem;
+      }
+
+      //   ul > li {
+      //     padding: 0.5rem 1.5rem;
+      //   }
+    }
+
+    &__image {
+      &-mobile {
+        display: none;
+      }
+
+      &-desktop {
+        display: inline;
+      }
+    }
+  }
 }
 
 // .attribution {

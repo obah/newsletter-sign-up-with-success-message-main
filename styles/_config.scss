@@ -27,10 +27,14 @@ body {
   font-weight: 700;
   border: 0;
   border-radius: 0.5rem;
+
+  &:hover {
+    background-image: linear-gradient(to right, red, $tomato);
+  }
 }
 
 @mixin big-screen {
-  @media screen and (min-wdith: 1440px) {
+  @media screen and (min-width: 1440px) {
     @content;
   }
 }
